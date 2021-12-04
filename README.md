@@ -47,6 +47,12 @@ Este código foi gerado ao longo da apresentação do hands-on de JUnit 5 onde a
 
    mvn clean test
 
+### Como rodar os testes que tenham uma tag específica
+
+Exemplo para rodar somente os testes que possuem a tag "Simple", ou seja, os testes marcados com '@Tag("Simple)':
+
+mvn test -Dgroups=Simple
+
 ## Como gerar e visualizar relatórios de execução de teste via linha de comando
 1. Abra o CMD (Prompt de comando)
 2. Acesse a pasta onde encontra-se o projeto:
