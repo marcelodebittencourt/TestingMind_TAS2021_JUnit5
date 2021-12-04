@@ -1,3 +1,5 @@
+![](https://github.com/marcelodebittencourt/TestingMind_TAS2021_JUnit5/workflows/tests/badge.svg)
+
 # TestingMind TAS 2021 - Apresentação JUnit5
 Este código foi gerado ao longo da apresentação do hands-on de JUnit 5 onde apresentei novas funcionalidades deste framework de testes unitários.
 

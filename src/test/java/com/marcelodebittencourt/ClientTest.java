@@ -72,7 +72,7 @@ public class ClientTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/client.csv", numLinesToSkip = 1, delimiter = ';')
+    @CsvFileSource(resources = "/clients.csv", numLinesToSkip = 1, delimiter = ';')
     void testNewClientDifferentValues(int id, String name){
         Client client = new Client(id, name);
         assertEquals(id, client.getId());
