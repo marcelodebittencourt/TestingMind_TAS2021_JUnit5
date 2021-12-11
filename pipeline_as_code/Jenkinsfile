@@ -7,15 +7,22 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Tests with simple tag') {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/marcelodebittencourt/TestingMind_TAS2021_JUnit5.git'
 
                 // To run Maven on a Windows agent, use
-                bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                bat "mvn -B test -Dgroups=Simple --file pom.xml"
             }
 
+        }
+
+        stage('All Tests') {
+            steps {
+                 // To run Maven on a Windows agent, use
+                bat "mvn -B test --file pom.xml"
+            }
             post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
